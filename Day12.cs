@@ -31,22 +31,65 @@ namespace _30DaysOfCode
          */
 
             class Person{
-	protected string firstName;
-	protected string lastName;
-	protected int id;
+	                 protected string firstName;
+	                 protected string lastName;
+	                 protected int id;
 	
-	public Person(){}
-	public Person(string firstName, string lastName, int identification){
-			this.firstName = firstName;
-			this.lastName = lastName;
-			this.id = identification;
-	}
-	public void printPerson(){
-		Console.WriteLine("Name: " + lastName + ", " + firstName + "\nID: " + id); 
-	}
-}
+	                public Person(){}
+	                public Person(string firstName, string lastName, int identification){
+		        	this.firstName = firstName;
+		        	this.lastName = lastName;
+			        this.id = identification;
+                	}
+	                public void printPerson(){
+	            	Console.WriteLine("Name: " + lastName + ", " + firstName + "\nID: " + id); 
+	                }
+            }
 
-      
+        class Student : Person
+        {
+            
+            
+            int[] scores;
+            
+            public Student(string firstName, string lastName, int id, int[] testScores)
+            {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.id = id;
+                scores = testScores;
+            }
+
+            public char Calculate()
+            {
+                double average = scores.Average();
+                
+                if(90 <= average)
+                {
+                    return 'O';
+                } else if(80 <= average && average < 90)
+                {
+                    return 'E';
+                } else if (70 <= average && average < 80)
+                {
+                    return 'A';
+                } else if (55 <= average && average < 70)
+                {
+                    return 'P';
+                } else if (40 <= average && average < 55)
+                {
+                    return 'D';
+                } else 
+                {
+                    return 'T';
+                }
+                     
+            }
+
+            
+
+        }
+
         
         
             public void Run()

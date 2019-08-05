@@ -10,7 +10,8 @@ namespace _30DaysOfCode
     {
         static void Main(string[] args)
         {
-
+            Day12 d12 = new Day12();
+            d12.Run();
 
         }
     }
