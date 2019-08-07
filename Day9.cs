@@ -17,7 +17,16 @@ namespace _30DaysOfCode
         */
         static int factorial(int n)
         {
-
+            int result = 1;
+            if (n == 1)
+            {
+                return result;
+            }
+            else
+            {
+                result *= n * factorial((n - 1));
+                return result;
+            }
 
         }
 
