@@ -49,7 +49,6 @@ namespace _30DaysOfCode
         class Student : Person
         {
             
-            
             int[] scores;
             
             public Student(string firstName, string lastName, int id, int[] testScores)
@@ -110,8 +109,6 @@ namespace _30DaysOfCode
                 s.printPerson();
                 Console.WriteLine("Grade: " + s.Calculate() + "\n");
             }
-        
-
 
 
     }
